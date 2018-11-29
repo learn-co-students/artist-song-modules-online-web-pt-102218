@@ -1,9 +1,12 @@
 require 'pry'
 
 class Artist
-  extend Memorable::ClassMethods
+
   attr_accessor :name
   attr_reader :songs
+
+  extend Memorable::ClassMethods
+  extend Findable::ClassMethods
 
   @@artists = []
 
@@ -12,13 +15,14 @@ class Artist
     @songs = []
   end
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+  #   @@artists.detect{|a| a.name == name}
+  # end
 
   def self.all
     @@artists
   end
+
 
   def add_song(song)
     @songs << song
