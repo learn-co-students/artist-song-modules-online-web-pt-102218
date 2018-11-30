@@ -1,4 +1,7 @@
-require_relative 'spec_helper.rb'
+require_relative './spec_helper.rb'
+require_relative '../lib/concerns/memorable.rb'
+require_relative '../lib/concerns/findable.rb'
+require_relative '../lib/concerns/to.param.rb'
 
 describe Song do
   before(:each) do
