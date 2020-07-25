@@ -1,6 +1,14 @@
 require 'pry'
 
 class Artist
+<<<<<<< HEAD
+  extend Memorable::ClassMems
+  include Memorable::InstanceMems
+  extend Findable
+=======
+  extend Memorable
+>>>>>>> c4f9ad5af2c7e3015d9a31dc48990dc1e6aefa29
+  
   attr_accessor :name
   attr_reader :songs
 
@@ -11,20 +19,12 @@ class Artist
     @songs = []
   end
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+  #   @@artists.detect{|a| a.name == name}
+  # end
 
   def self.all
     @@artists
-  end
-
-  def self.reset_all
-    self.all.clear
-  end
-
-  def self.count
-    self.all.count
   end
 
   def add_song(song)
