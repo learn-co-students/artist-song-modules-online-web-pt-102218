@@ -1,8 +1,11 @@
 require 'pry'
 
 class Artist
+  
   attr_accessor :name
   attr_reader :songs
+  
+  
 
   @@artists = []
 
@@ -21,7 +24,7 @@ class Artist
 
   def self.reset_all
     self.all.clear
-  end
+ end
 
   def self.count
     self.all.count
